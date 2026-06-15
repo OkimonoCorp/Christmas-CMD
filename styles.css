@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+    font-family: 'Courier New', monospace;
+    color: #bb44ff;
+}
+
+.console-body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.console-body::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+.console-body::-webkit-scrollbar-thumb {
+    background: var(--current-color, #00ff00); 
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.console-body::-webkit-scrollbar-thumb:hover {
+    background: #44ff44;
+}
+
+.console-container {
+    width: 80%;
+    max-width: 800px;
+    height: 500px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px var(--current-color, #bd55ff);
+}
+
+.console-header {
+    background: #333;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.console-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.console-buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.close { background: #ff5f56; }
+.minimize { background: #ffbd2e; }
+.maximize { background: #27c93f; }
+
+.console-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #888;
+    font-size: 14px;
+}
+
+.console-body {
+    padding: 20px;
+    height: calc(100% - 40px);
+    overflow: auto;
+    background: #000;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.console-line {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 24px;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    caret-color: var(--current-color, #bd55ff);
+}
+
+.prompt {
+    color: #bd55ff;
+    margin-right: 10px;
+    min-width: 15px;
+    display: inline-block;
+}
+
+.sapin {
+    line-height: 1;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+    white-space: pre;
+    width: 100%;
+    color: inherit;
+}
+
+.sapin span[class^="balln"] {
+    color: inherit !important; 
+    transition: color 0.1s;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.error {
+    color: #ff4444;
+}
+
+.command {
+    color: #00ffff;
+}
+
+.help {
+    color: #ffff00;
+}
+
+.cat-art {
+    margin: 10px 0;
+    width: 100%; 
+}
